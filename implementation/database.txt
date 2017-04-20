@@ -1,0 +1,55 @@
+/*
+
+SQLyog-Free MySQL GUI v5.13
+
+Host-5.0.22-community-nt: 3 step user authentication
+
+**********************************************************************
+
+Server version:5.0.22-community-nt
+
+*/
+
+SET NAMES utf8;
+
+SET SQL_MODE=";
+
+create database if not exists ‘user database';
+
+USE ‘user_database';
+
+SET @OLD_SQL_MODE=@@SQL_MODE,
+
+SQL_MODE='NO_AUTO_VALUE_ON-ZERO';
+
+/* Table structure for table ‘user database'*/
+
+DROP TABLE IF EXISTS 'user';
+
+CREATE TABLE 'user'(
+
+'id' int(11) NOT NULL auto_increment,
+
+'username' varchar(100)default NULL,
+
+'password' varchar(100)default NULL,
+
+'signature' varchar(100) default NULL,
+
+'otp' varchar(30) default NULL,
+
+'date' datetime default NULL,
+
+PRIMARY KEY ('id')
+
+)ENGINE=InnoDB DEFAULT CHARSET=latin l;
+
+/*data for the table 'user'*/
+
+insert into 'accidents('id', 'username', 'password', 'signature', 'otp', 'date') values
+
+(15,’Kaaavya','abcdefg','11110001100111000011000001111111',' ','2015-03-16 11:37:52');
+
+insert into 'accidents('id', 'username', 'password', 'signature', 'otp', 'date') values
+
+(16,’Biswajeet','hijklmnop','10010111100100001100000111111111',' ','2014-03-16 11:41:10');
